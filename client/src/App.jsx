@@ -6,13 +6,13 @@ function App() {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
-    fetch('https://tu-backend-en-render.com/api/usuarios')
+    fetch('https://apitest-app.onrender.com/api/usuarios')
       .then((res) => res.json())
       .then((data) => setUsuarios(data));
   }, []);
 
   const agregarUsuario = () => {
-    fetch('https://tu-backend-en-render.com/api/usuarios', {
+    fetch('https://apitest-app.onrender.com/api/usuarios', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, email }),
